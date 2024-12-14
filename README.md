@@ -1,2 +1,2 @@
 # onnx-spliter
-This project provides a simple way to split an ONNX computation graph into two parts based on user-defined nodes.
+When using NPU for inference with complex models, it may not be possible to convert the entire model into a format fully supported by the NPU due to insufficient operator support. As a result, the model needs to be split, with the computationally intensive parts converted to a format supported by the NPU, while the remaining parts run on the CPU. This repository is designed to facilitate that process, allowing users to easily split their ONNX models as needed.
