@@ -1,0 +1,1 @@
+python convert.py pytorch ./model/yolo11n.pt --input_size 640*640 ./model/yolo11.onnx

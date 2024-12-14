@@ -24,7 +24,7 @@ class ModelConverter:
         :param output_path: The path to save the ONNX model.
         """
         try:
-            print(dir(model))
+            print(type(model))
             model.eval()  # Set the model to evaluation mode
             # Export the PyTorch model to ONNX
 
@@ -66,6 +66,7 @@ class ModelConverter:
         """
         try:
             model = torch.load(model_path)
+            print(model)
             print(f"PyTorch model loaded from {model_path}")
             return model
         except Exception as e:
