@@ -3,8 +3,16 @@ PIP = pip3
 VENV_DIR = .env
 REQUIREMENTS = requirements.txt
 SRC_DIR = src
+TEST_DIR = tests
 
 all: install convert
+
+test-convert:
+	@echo "Running convert tests..."
+	@$(VENV_DIR)/bin/pytest $(TEST_DIR)/testconvert.py -v
+
+test:
+	$(PYTHON) -m pytest $(TEST_DIR) -v
 
 install: $(REQUIREMENTS)
 	@echo "Setting up virtual environment and installing dependencies..."
